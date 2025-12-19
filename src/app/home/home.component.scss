@@ -1,0 +1,756 @@
+/* =========================
+   Variables
+========================= */
+$primary-color: #6a11cb;
+$secondary-color: #2575fc;
+$success-color: #28a745;
+$warning-color: #ffc107;
+$danger-color: #dc3545;
+$text-color: #333;
+$text-light: #f1f1f1;
+$bg-light: #f7f7f7;
+$btn-bg: #ff6f61;
+$btn-hover: #ff3b2e;
+
+/* =========================
+   Hero / Home Banner Section
+========================= */
+.intro-section {
+  background: #f7f7f7;
+}
+
+/* Card Style */
+.intro-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+}
+
+/* Card hover lift */
+.intro-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(108, 99, 255, 0.2);
+}
+
+/* Image sizing & animation */
+.intro-image img {
+  max-height: 420px;     /* increased image size */
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Image hover zoom */
+.intro-image img:hover {
+  transform: scale(1.06);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* Text styling */
+.intro-text {
+  color: #333;
+  line-height: 1.6;
+}
+
+.intro-subtext {
+  color: #6c757d;
+  font-size: 0.95rem;
+}
+
+/* Button hover */
+.btn-warning {
+  transition: all 0.3s ease;
+}
+
+.btn-warning:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(255, 193, 7, 0.4);
+}
+
+
+/* Section */
+.technologies-section {
+  background: #f8f9fa;
+}
+
+/* Card Layout */
+.tech-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 2.2rem 2rem;
+  background: #ffffff;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hover Lift + Glow */
+.tech-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.tech-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+/* Icon hover animation */
+.tech-card:hover .tech-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Title */
+.tech-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #212529;
+}
+
+/* Text */
+.tech-text {
+  font-size: 0.95rem;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+/* Subtle gradient accent line */
+.tech-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #6c63ff, #16b8a6);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.tech-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Gradient Background */
+.courses-section {
+  background: linear-gradient(135deg, #6c63ff, #16b8a6);
+  overflow: hidden;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+/* Hover Lift */
+.glass-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* Image */
+.feature-img {
+  width: 500px;
+  max-width: 100%;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease;
+}
+
+.glass-card:hover .feature-img {
+  transform: scale(1.05);
+}
+
+/* Text */
+.course-info h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.course-info ul {
+  padding-left: 1.2rem;
+}
+
+.course-info li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* Swipe animation for mobile */
+.swipe-card {
+  touch-action: pan-y;
+  transition: transform 0.3s ease;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 1.8rem;
+  }
+
+  .course-info h3 {
+    text-align: center;
+  }
+
+  .course-info ul {
+    font-size: 0.95rem;
+  }
+}
+/* Section Background */
+.technologies-section {
+  background: linear-gradient(135deg, #eef2ff, #f8f9fa);
+}
+
+/* Heading */
+.tech-heading {
+  font-weight: 600;
+  color: #0dcaf0;
+}
+
+/* Card Base */
+.tech-card {
+  flex: 1 1 260px;
+  max-width: 320px;
+  padding: 2.5rem 2rem;
+  border-radius: 18px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.45s ease;
+}
+
+/* Glassmorphism */
+.glass-tech {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Hover Lift */
+.glass-tech:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 30px 60px rgba(13, 202, 240, 0.25);
+}
+
+/* Icon */
+.tech-icon {
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+/* Icon animation */
+.glass-tech:hover .tech-icon {
+  transform: scale(1.25) rotate(6deg);
+}
+
+/* Title */
+.tech-title {
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+  color: #212529;
+}
+
+/* Text */
+.tech-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #6c757d;
+}
+
+/* Gradient bottom line */
+.tech-card::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #0dcaf0, #6c63ff);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.tech-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tech-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .tech-heading {
+    font-size: 1.6rem;
+  }
+}
+// 
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.6);
+}
+
+.feature-card,
+.tech-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.1);
+  transition: all .4s ease;
+}
+
+.feature-card:hover,
+.tech-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0,0,0,.15);
+}
+
+.feature-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #0d6efd;
+}
+
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.footer-section {
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  color: #fff;
+  padding: 3rem 0;
+}
+
+.footer-text {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.footer-title {
+  color: #f8f9fa;
+  font-weight: 600;
+}
+
+.footer-links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #bbb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffc107;
+  padding-left: 6px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  background: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  background: #ffc107;
+  color: #000;
+  transform: translateY(-4px);
+}
+
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+  color: #aaa;
+}
+
+
+.home-banner {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url('../../assets/images.jfif') center/cover no-repeat;
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 4rem;
+    gap: 3rem;
+
+    .banner-title {
+      max-width: 400px;
+      text-align: left;
+      animation: fadeInLeft 1.5s ease forwards;
+
+      h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+        color: $warning-color;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+        color: $text-light;
+      }
+    }
+
+    .banner-description {
+      max-width: 500px;
+      color: $text-light;
+      animation: fadeInRight 1.5s ease forwards;
+      text-align: left;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.05rem;
+        margin-bottom: 1rem;
+        line-height: 1.5;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        background-color: $warning-color;
+        color: #111;
+        font-weight: 600;
+        border-radius: 8px;
+        text-decoration: none;
+        transition: 0.3s ease;
+
+        &:hover {
+          background-color: darken($warning-color, 10%);
+          transform: translateY(-3px);
+        }
+      }
+    }
+  }
+}
+
+/* =========================
+   Technologies / Features Section
+========================= */
+.technologies-section {
+  position: relative;
+  padding: 80px 0;
+  background: $bg-light;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $text-color;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .tech-card {
+    background: #fff;
+    flex: 1 1 250px;
+    max-width: 300px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    transition: all 0.4s ease;
+    position: relative;
+
+    i {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    h5 {
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: $text-color;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    &:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      z-index: 3;
+
+      i {
+        transform: rotate(10deg) scale(1.1);
+      }
+    }
+  }
+}
+
+/* =========================
+   Courses / Core Features Section
+========================= */
+.courses-section {
+  padding: 60px 20px;
+  background-color: $bg-light;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 2.5rem;
+    color: $text-color;
+  }
+
+  .courses-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .course-card {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      img {
+        width: 250px;
+        border-radius: 10px;
+        animation: fadeInLeft 1s ease forwards;
+      }
+
+      .course-info {
+        h3 {
+          font-size: 1.8rem;
+          margin-bottom: 10px;
+        }
+        p, ul {
+          font-size: 1rem;
+          color: #555;
+          margin-bottom: 10px;
+        }
+        ul {
+          padding-left: 20px;
+        }
+      }
+
+      &.reverse {
+        flex-direction: row-reverse;
+
+        img {
+          animation: fadeInRight 1s ease forwards;
+        }
+      }
+
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+  }
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #111;
+  color: #fff;
+
+  p {
+    margin: 5px 0;
+  }
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes fadeInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes fadeInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+
+/* =========================
+   Responsive Design
+========================= */
+@media (max-width: 992px) {
+  .home-banner {
+    padding: 80px 20px;
+
+    .banner-content {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 2rem;
+      gap: 2rem;
+
+      .banner-title,
+      .banner-description {
+        max-width: 100%;
+        text-align: center;
+      }
+
+      .banner-title h1 { font-size: 2.5rem; }
+      .banner-description h2 { font-size: 1.8rem; }
+      .banner-description p { font-size: 1rem; }
+    }
+  }
+
+  .courses-grid .course-card {
+    flex-direction: column !important;
+
+    img {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .home-banner {
+    height: auto;
+    padding: 60px 1rem;
+
+    .banner-content {
+      flex-direction: column;
+      gap: 1.5rem;
+
+      .banner-title h1 { font-size: 2rem; }
+      .banner-description h2 { font-size: 1.5rem; }
+      .banner-description p { font-size: 0.95rem; }
+
+      .banner-description .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .technologies-section .tech-card {
+    width: 160px;
+    padding: 20px;
+  }
+}
+
+$primary-yellow: #ffc107;      // Used for highlights, buttons, headings
+$text-light: #f8f9fa;          // Light text
+$text-secondary: #adb5bd;      // Subtle gray
+$bg-dark-overlay: rgba(0,0,0,0.6);
+$success-green: #28a745;
+$info-blue: #17a2b8;
+$warning-orange: #fd7e14;
+
+/* Fonts */
+$font-base: 'Segoe UI', sans-serif;
+
+.home-banner {
+  position: relative;
+  height: 80vh;
+  background: url('../../assets/istockphoto-1208347853-612x612.jpg') no-repeat center center;
+  background-size: cover;
+
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background-color: $bg-dark-overlay;
+  }
+
+  .banner-content {
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem;
+    gap: 3rem;
+
+    .banner-title h1 {
+      color: $primary-yellow;
+    }
+
+    .banner-title p,
+    .banner-description h2,
+    .banner-description p {
+      color: $text-light;
+    }
+
+    .btn-warning {
+      background-color: $primary-yellow;
+      border: none;
+      &:hover {
+        background-color: darken($primary-yellow, 10%);
+      }
+    }
+  }
+}

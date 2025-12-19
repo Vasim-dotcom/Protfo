@@ -1,0 +1,243 @@
+/* ===============================
+   SaaS Navbar Styling with Image
+   =============================== */
+/* Glass Navbar */
+.glass-navbar {
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  z-index: 999;
+}
+
+/* Overlay */
+.navbar-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 0;
+}
+
+/* Ensure content above overlay */
+.container {
+  z-index: 1;
+}
+
+/* Nav links */
+.nav-link {
+  color: #ffffff;
+  margin-left: 1rem;
+  position: relative;
+  transition: all 0.3s ease;
+  opacity: 0.85;
+}
+
+/* Hover */
+.nav-link:hover {
+  opacity: 1;
+  color: #0dcaf0;
+}
+
+/* Active state */
+.nav-link.active {
+  color: #0dcaf0;
+  opacity: 1;
+}
+
+/* Animated underline */
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(90deg, #0dcaf0, #6c63ff);
+  transition: width 0.3s ease;
+}
+
+.nav-link.active::after,
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 991px) {
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1050; /* Above content, below modals */
+  backdrop-filter: blur(12px);
+  color: black;
+  // background: url('../../../assets/download.jfif') no-repeat center center; /* Add your image path */
+  background-size: cover;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: all 0.35s ease;
+  padding: 0.8rem 2rem;
+  position: relative;
+}
+
+/* Optional semi-transparent overlay for readability */
+.navbar::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* adjust for darkness */
+  z-index: 1;
+}
+
+/* Brand */
+.navbar-brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #ffffff !important;
+  transition: transform 0.3s ease, color 0.3s ease;
+  position: relative; /* above overlay */
+  z-index: 2;
+
+  &:hover {
+    transform: translateY(-1px);
+    color: #ffd700 !important; /* gold-like hover for visibility */
+  }
+}
+
+/* Navbar links */
+.navbar-nav {
+  gap: 1.2rem;
+  position: relative;
+  z-index: 2; /* above overlay */
+}
+
+.nav-link {
+  position: relative;
+  font-weight: 500;
+  color: #ffffff !important; /* white text on image */
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ffd700 !important; /* hover color visible on image */
+  }
+
+  /* Animated underline */
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: linear-gradient(90deg, #ffd700, #ffec8b); /* visible gradient on image */
+    transition: width 0.35s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+/* Active link (optional) */
+.nav-link.active {
+  color: #ffd700 !important;
+
+  &::after {
+    width: 100%;
+  }
+}
+
+.myhostely-navbar {
+  background: linear-gradient(135deg, #6A5AF9, #7B6CFF);
+  box-shadow: 0 6px 20px rgba(106, 90, 249, 0.35);
+}
+
+/* NAV LINKS */
+.myhostely-navbar .nav-link {
+  color: #f1f1f1 !important;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* ICON */
+.myhostely-navbar .nav-link i {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+/* HOVER */
+.myhostely-navbar .nav-link:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* ACTIVE */
+.myhostely-navbar .nav-link.active {
+  background: rgba(255, 255, 255, 0.25);
+  font-weight: 600;
+}
+
+/* ICON ANIMATION */
+.myhostely-navbar .nav-link:hover i {
+  transform: scale(1.2);
+}
+
+/* MOBILE */
+@media (max-width: 991px) {
+  .myhostely-navbar .navbar-nav {
+    padding-top: 1rem;
+    text-align: center;
+  }
+}
+
+
+/* Toggler button */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  position: relative;
+  z-index: 2;
+}
+
+.navbar-toggler-icon {
+  filter: brightness(1.2);
+}
+
+/* Mobile menu animation */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(0, 0, 0, 0.85); /* dark background for readability */
+    padding: 1.5rem;
+    border-radius: 14px;
+    margin-top: 1rem;
+    animation: slideDown 0.35s ease;
+  }
+
+  .nav-link {
+    padding: 0.7rem 0;
+    text-align: center;
+  }
+}
+
+/* Slide animation */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
