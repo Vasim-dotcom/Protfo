@@ -754,3 +754,150 @@ $font-base: 'Segoe UI', sans-serif;
     }
   }
 }
+
+
+
+@media (max-width: 575px) {
+
+  .home-banner {
+    height: auto;
+    padding: 60px 1rem;
+    text-align: center;
+
+    .banner-content {
+      flex-direction: column;
+      padding: 0;
+      gap: 1.5rem;
+    }
+
+    .banner-title h1 {
+      font-size: 2rem;
+    }
+
+    .banner-description h2 {
+      font-size: 1.4rem;
+    }
+
+    .banner-description p {
+      font-size: 0.95rem;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+
+  .tech-card {
+    max-width: 100%;
+  }
+
+  .course-card {
+    flex-direction: column !important;
+    text-align: center;
+
+    img {
+      width: 100%;
+      max-width: 280px;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+  .home-banner {
+    height: auto;
+    padding: 70px 2rem;
+  }
+
+  .banner-title h1 {
+    font-size: 2.3rem;
+  }
+
+  .banner-description h2 {
+    font-size: 1.6rem;
+  }
+
+  .tech-card {
+    max-width: 260px;
+  }
+
+  .course-card {
+    flex-direction: column !important;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .home-banner {
+    height: auto;
+    padding: 80px 2rem;
+  }
+
+  .banner-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .banner-title h1 {
+    font-size: 2.6rem;
+  }
+
+  .banner-description h2 {
+    font-size: 1.8rem;
+  }
+
+  .tech-card {
+    max-width: 280px;
+  }
+
+  .course-card {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+  .home-banner {
+    height: 80vh;
+  }
+
+  .banner-title h1 {
+    font-size: 3rem;
+  }
+
+  .banner-description h2 {
+    font-size: 2rem;
+  }
+
+  .tech-card {
+    max-width: 300px;
+  }
+}
+
+
+@media (min-width: 1200px) {
+
+  .home-banner {
+    height: 85vh;
+  }
+
+  .banner-title h1 {
+    font-size: 3.5rem;
+  }
+
+  .banner-description h2 {
+    font-size: 2.2rem;
+  }
+
+  .tech-card {
+    max-width: 320px;
+  }
+}

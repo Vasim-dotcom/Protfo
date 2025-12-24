@@ -1,6 +1,6 @@
 <!-- HERO SECTION / Home Banner -->
 <section class="home-banner" 
-         style="position: relative; height: 80vh; background: url('../../assets/istockphoto-1208347853-612x612.jpg') no-repeat center center; background-size: cover;">
+         style="position: relative; height: 100vh; background: url('../../assets/istockphoto-1208347853-612x612.jpg') no-repeat center center; background-size: cover;">
   
   <!-- Overlay -->
   <div class="overlay" style="position: absolute; inset: 0; background-color: rgba(0,0,0,0.6);"></div>
@@ -10,25 +10,66 @@
        style="z-index: 2; height: 100%; display: flex; flex-direction: row; align-items: center; justify-content: space-between; padding: 0 4rem; gap: 3rem;">
 
     <!-- Title (Left Side) -->
-    <div class="banner-title text-start" data-aos="fade-right" data-aos-delay="100" style="max-width: 400px;">
-      <h1 class="text-warning display-3 fw-bold mb-4">MyHostely</h1>
-      <p class="lead text-light mt-2">Smart Living, Smart Management</p>
+<div class="container-fluid banner-wrapper py-5">
+  <div class="row align-items-center">
+    
+    <!-- Left Side: Text -->
+    <div class="col-lg-6 col-md-8 col-12"
+         data-aos="fade-right"
+         data-aos-delay="100">
+      <div class="banner-title-wrapper d-flex flex-column justify-content-center gap-3">
+
+        <h1 class="brand-title text-warning fw-bold mb-2"
+            data-aos="zoom-in"
+            data-aos-delay="200">
+          MyHostely
+        </h1>
+
+        <p class="brand-tagline text-light mb-3"
+           data-aos="fade-up"
+           data-aos-delay="400">
+          Smart Living, Smart Management
+        </p>
+
+        <div class="banner-description text-light"
+             data-aos="fade-left"
+             data-aos-delay="300">
+
+          <h2 class="banner-heading mb-2">
+            Welcome to MyHostely
+          </h2>
+
+          <p class="banner-lead mb-2">
+            Discover a smart AI-powered hostel management platform designed for students, travelers, and hostel owners.
+          </p>
+
+          <p class="banner-subtext mb-3">
+            Streamline your hostel operations or find the perfect stay with AI-driven recommendations and personalized experiences.
+          </p>
+
+          <a href="#"
+             class="btn btn-warning banner-btn"
+             data-aos="zoom-in"
+             data-aos-delay="600">
+            Explore Now
+          </a>
+
+        </div>
+      </div>
     </div>
 
-    <!-- Description (Right Side) -->
-    <div class="banner-description text-light" 
-         data-aos="fade-left" data-aos-delay="300" 
-         style="max-width: 500px;">
-      <h2 class="text-light display-6 mb-3">Welcome to MyHostely</h2>
-      <p class="fs-5 mb-3">
-        Discover a smart AI-powered hostel management platform designed for students, travelers, and hostel owners. 
-        Enjoy intelligent room suggestions, real-time availability, automated occupancy insights, and a connected community experience.
-      </p>
-      <p class="fs-6 text-secondary mb-4">
-        Streamline your hostel operations or find the perfect stay with AI-driven recommendations and personalized experiences.
-      </p>
-      <a href="#" class="btn btn-warning" data-aos="zoom-in" data-aos-delay="600">Explore Now</a>
+    <!-- Right Side: Image -->
+    <div class="col-lg-6 col-md-4 col-12 text-center mt-4 mt-lg-0">
+      <!-- <img src="your-image.jpg" class="img-fluid" alt="Banner Image"> -->
     </div>
+
+  </div>
+</div>
+
+
+    <!-- Description (Right Side) -->
+
+
 
   </div>
 </section>
