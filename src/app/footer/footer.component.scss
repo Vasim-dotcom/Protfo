@@ -1,0 +1,211 @@
+/* ===============================
+   SaaS Footer Styling (Fully Responsive)
+   =============================== */
+
+/* ===============================
+   Base Footer
+   =============================== */
+.footer {
+  background: linear-gradient(180deg, #0b0f19, #06070c);
+  color: #d1d5db;
+  padding: 70px 0 30px;
+  position: relative;
+  z-index: 1000;
+}
+
+.footer-top {
+  padding-bottom: 35px;
+}
+
+/* Brand */
+.footer-brand {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+/* Text */
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #9ca3af;
+  max-width: 360px;
+}
+
+/* Titles */
+.footer-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #ffffff;
+}
+
+/* Links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #9ca3af;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: #0d6efd;
+      transform: translateX(6px);
+    }
+  }
+}
+
+/* Divider */
+.footer-divider {
+  border-color: rgba(255, 255, 255, 0.08);
+  margin: 25px 0;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Underline Animation */
+.footer a {
+  position: relative;
+}
+
+.footer a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  left: 0;
+  bottom: -3px;
+  background: #0d6efd;
+  transition: width 0.3s ease;
+}
+
+.footer a:hover::after {
+  width: 100%;
+}
+
+/* ===============================
+   SMALL MOBILE (< 480px)
+   =============================== */
+@media (max-width: 479px) {
+  .footer {
+    padding: 50px 15px 20px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    font-size: 1.45rem;
+  }
+
+  .footer-text {
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  .footer-title {
+    margin-top: 25px;
+  }
+
+  .footer-links a:hover {
+    transform: none;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
+
+/* ===============================
+   MOBILE (480px – 767px)
+   =============================== */
+@media (min-width: 480px) and (max-width: 767px) {
+  .footer {
+    padding: 55px 20px 25px;
+    text-align: center;
+  }
+
+  .footer-text {
+    margin: 0 auto;
+  }
+
+  .footer-title {
+    margin-top: 30px;
+  }
+
+  .footer-links a:hover {
+    transform: none;
+  }
+}
+
+/* ===============================
+   TABLET (768px – 1023px)
+   =============================== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .footer {
+    padding: 65px 30px 30px;
+  }
+
+  .footer-text {
+    font-size: 0.93rem;
+  }
+
+  .footer-links a {
+    font-size: 0.93rem;
+  }
+}
+
+/* ===============================
+   LAPTOP (1024px – 1279px)
+   =============================== */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .footer {
+    padding: 70px 0 30px;
+  }
+
+  .footer-text {
+    max-width: 380px;
+  }
+}
+
+/* ===============================
+   DESKTOP (1280px – 1535px)
+   =============================== */
+@media (min-width: 1280px) {
+  .footer {
+    padding: 75px 0 35px;
+  }
+
+  .footer-text {
+    max-width: 420px;
+  }
+}
+
+/* ===============================
+   LARGE DESKTOP (≥ 1536px)
+   =============================== */
+@media (min-width: 1536px) {
+  .footer {
+    padding: 90px 0 40px;
+  }
+
+  .footer-brand {
+    font-size: 1.9rem;
+  }
+
+  .footer-text {
+    font-size: 1rem;
+  }
+}
